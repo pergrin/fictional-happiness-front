@@ -4,10 +4,10 @@ import requests
 
 def send_request(text, length):
     api_url = 'https://finished-fictional-happiness-pergrin.endpoint.ainize.ai/predict'
-    files = {
+    data = {
         'base_text': (None, text),
     }
-    response = requests.post(api_url, files=files)
+    response = requests.post(api_url, data=data)
     status_code = response.status_code
 
     return status_code, response
