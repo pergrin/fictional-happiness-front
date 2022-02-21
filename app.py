@@ -24,7 +24,7 @@ if st.button("Submit"):
     if length_slider == 0:
         st.warning("Please define the length")
     else:
-        status_code, response = send_request(base_story, length)
+        status_code, response = send_request(base_story, length_slider)
         if status_code == 200:
             prediction = response.json()
             st.success(prediction["prediction"])
